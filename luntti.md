@@ -44,3 +44,9 @@ Varoitus viikkotentistä harjoituksessa 4
 ### H5
 
 Sessio tallentaa cookien, sisältää JSESSIONID
+
+
+## 30.8.2017
+
+Github jusju ownserver
+
