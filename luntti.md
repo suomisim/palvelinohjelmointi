@@ -49,4 +49,22 @@ Sessio tallentaa cookien, sisältää JSESSIONID
 ## 30.8.2017
 
 Github jusju ownserver
+Source -> Generate getters and setters...
+New -> New Servlet
+3 kirjainta + ctrl + space
+Tietokannan kanssa kommunikoidaan SSH-yhteydellä
+MySQL workbench graafinen käyttöliittymä
+
+### H6
+
+DAO = Data Access Object avulla olion tiedot voidaan tallentaa tietokantaan
+CRUD = Create Read Update Delete
+Asetustiedostot luodaan New -> Source Folder
+WEB-INF alla olevien näkyvyyttä voi säätää
+
+Harjoitukseen helpoin tapa toteuttaa poisto on:
+Jokainen rivi oma forminsa jolla oma ID
+Suola täytyy olla selkokielisenä, käytetään vertaamaan hasheja 
+
+
 
