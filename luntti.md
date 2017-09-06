@@ -70,5 +70,37 @@ Suola täytyy olla selkokielisenä, käytetään vertaamaan hasheja
 
 System.out.println("DEBUG: " +action);
 
+### MAVEN
+
+"Build" -työkalu, hakee tarvittavat jarrit internetistä
+POM.xml tiedosto kertoo mitä jarreja tarvitaan (DEPENDENCY kohta)
+https://mvnrepository.com/
+Kotihakemistoon viitataan ~ merkillä ~/m2/repository
+Mavenin avulla voi esim. deployata ohjelmiston palvelimelle
+Gradle on "uudempi versio" Mavenista, joka ei käytä XML:ää
+Käytetään komentoriviltä
+
+### JUNIT
+
+Testaustyökalu, yksikkötestejä, käytettävyystestaus, suorituskykytestaus, tietoturvatestaus
+
+### Demo 11
+
+Convention over Configuration = Mavenin oletushakemistorakenne
+GitHubin kanssa on huomioitava tyhjät hakemistot -> eivät siirry GitHubiin -> Jokaiseen hakemistoon tiedosto (esim. .gitkeep)
+Testit /src/test/java
+Testimetodit alkavat aina test ja annotoidaan aina @Test
+import org.junit.Test; import static org.junit.Assert.*; mukaan
+
+### Maven projekti GitHubiin
+
+New -> Other -> Maven -> Maven Project
+Simple project
+Paketoinniksi war
+webapp -> WEB-INF/web.xml vaaditaan (ehkä)
+Jokaiseen tyhjään hakemistoon .gitkeep tiestosto
+
+
+
 
 
