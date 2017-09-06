@@ -66,5 +66,9 @@ Harjoitukseen helpoin tapa toteuttaa poisto on:
 Jokainen rivi oma forminsa jolla oma ID
 Suola täytyy olla selkokielisenä, käytetään vertaamaan hasheja 
 
+## 6.9.2017
+
+System.out.println("DEBUG: " +action);
+
 
 
