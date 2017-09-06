@@ -79,6 +79,7 @@ Kotihakemistoon viitataan ~ merkillä ~/m2/repository
 Mavenin avulla voi esim. deployata ohjelmiston palvelimelle
 Gradle on "uudempi versio" Mavenista, joka ei käytä XML:ää
 Käytetään komentoriviltä
+mvn install asettaa paikalliseen repoon projektin, jolloin muut projektit voivat käyttää sen riippuvuuksia
 
 ### JUNIT
 
@@ -91,6 +92,8 @@ GitHubin kanssa on huomioitava tyhjät hakemistot -> eivät siirry GitHubiin -> 
 Testit /src/test/java
 Testimetodit alkavat aina test ja annotoidaan aina @Test
 import org.junit.Test; import static org.junit.Assert.*; mukaan
+.jsp tiedostot src/main/webapp/ kansioon / webapp/WEB-INF/jsp/ kansioon
+
 
 ### Maven projekti GitHubiin
 
@@ -99,6 +102,7 @@ Simple project
 Paketoinniksi war
 webapp -> WEB-INF/web.xml vaaditaan (ehkä)
 Jokaiseen tyhjään hakemistoon .gitkeep tiestosto
+
 
 
 
