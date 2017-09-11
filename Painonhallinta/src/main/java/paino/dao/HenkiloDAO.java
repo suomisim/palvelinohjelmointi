@@ -51,19 +51,20 @@ public class HenkiloDAO {
 		
 		try {
 				
-			String sql = "select weigth from webuser_weigth where userid=(?)";
-
-			PreparedStatement lause = yhteys.prepareStatement(sql);
+			String sql = "select date, weigth from webuser_weigth where userid=1";
 			
-			lause.setInt(1, h.getId());
-			lause.executeUpdate();
+			//PreparedStatement lause = yhteys.prepareStatement(sql);
+			//lause.setInt(1, h.getId());
+			//lause.executeUpdate();
+
 
 			Statement haku = yhteys.createStatement();
 			ResultSet tulokset = haku.executeQuery(sql);
 			
 			while(tulokset.next()) {
+				String paiva = tulokset.getString("date");
 				double paino = tulokset.getDouble("weigth");
-				PainoHenkilo ph = new PainoHenkilo(paino);
+				PainoHenkilo ph = new PainoHenkilo(paiva, paino);
 				painohenkilot.add(ph);
 			}
 			
@@ -83,11 +84,12 @@ public class HenkiloDAO {
 		
 		try {
 			
-			String sql = "INSERT INTO webuser_weigth (userid, weigth) values(?,?)";
+			String sql = "INSERT INTO webuser_weigth (date, userid, weigth) values(?,?,?)";
 			PreparedStatement lause = yhteys.prepareStatement(sql);
 			
-			lause.setInt(1, h.getId());
-			lause.setDouble(2, h.getPaino());
+			lause.setString(1, h.getDate());
+			lause.setInt(2, h.getId());
+			lause.setDouble(3, h.getPaino());
 			lause.executeUpdate();
 			
 			System.out.println("Lisättiin painotiedot tietokantaan.");

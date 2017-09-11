@@ -28,12 +28,12 @@ public class HenkiloServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-
+			String date = request.getParameter("date");
 			int id = Integer.parseInt(request.getParameter("id"));
 			String nimi = request.getParameter("nimi");
 			double paino = Double.parseDouble(request.getParameter("paino"));
 		
-			Henkilo h = new Henkilo(id, nimi, paino);
+			Henkilo h = new Henkilo(date, id, nimi, paino);
 
 			try {
 				HenkiloDAO hDao = new HenkiloDAO();

@@ -2,12 +2,14 @@ package paino.bean;
 
 public class Henkilo {
 	
+	private String date;
 	private int id;
 	private String nimi;
 	private double paino;
 	
-	public Henkilo(int id, String nimi, double paino) {
+	public Henkilo(String date, int id, String nimi, double paino) {
 		super();
+		this.date = date;
 		this.id = id;
 		this.nimi = nimi;
 		this.paino = paino;
@@ -22,6 +24,12 @@ public class Henkilo {
 		super();
 		this.id = id;
 		this.nimi = nimi;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
 	}
 
 		public int getId() {
