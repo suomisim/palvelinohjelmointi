@@ -32,7 +32,7 @@ public class WebUserDAO extends DAO {
 
 		try {
 
-			// tarkistetaan, että usernamella ei jo löydy käyttäjää
+
 			PreparedStatement usernameHaku = yhteys
 					.prepareStatement("select id from webuser where username = ?");
 			usernameHaku.setString(1, kayttaja.getUsername());
@@ -40,7 +40,6 @@ public class WebUserDAO extends DAO {
 			if (rs.next())
 				throw new UsernameVarattuPoikkeus();
 
-			// suoritetaan lisäys
 			PreparedStatement insertLause = yhteys
 					.prepareStatement("insert into webuser(username, password_hash, salt) values(?,?,?)");
 			insertLause.setString(1, kayttaja.getUsername());
@@ -50,10 +49,10 @@ public class WebUserDAO extends DAO {
 			insertLause.executeUpdate();
 
 		} catch (SQLException e) {
-			// JOTAIN VIRHETTÄ TAPAHTUI
+
 			throw new DAOPoikkeus("Tietokantahaku aiheutti virheen", e);
 		} finally {
-			// LOPULTA AINA SULJETAAN YHTEYS
+
 			suljeYhteys(yhteys);
 		}
 

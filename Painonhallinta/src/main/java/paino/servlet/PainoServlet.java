@@ -32,7 +32,6 @@ public class PainoServlet extends HttpServlet {
 			String nimi = request.getParameter("nimi");
 			Henkilo h = new Henkilo(id, nimi);
 
-
 			try {
 				HenkiloDAO hDao = new HenkiloDAO();
 				painohenkilot = hDao.hae(h);

@@ -46,16 +46,16 @@ public class HenkiloDAO {
 
 	public List<PainoHenkilo> hae(Henkilo h) throws DAOPoikkeus{		
 		
-		ArrayList<PainoHenkilo> painohenkilot = new ArrayList<PainoHenkilo>();
-		Connection yhteys = avaaYhteys();
 		
-		try {
-				
-			String sql = "select date, weigth from webuser_weigth where userid=1";
+		Connection yhteys = avaaYhteys();
+		ArrayList<PainoHenkilo> painohenkilot = new ArrayList<PainoHenkilo>();	
 			
-			//PreparedStatement lause = yhteys.prepareStatement(sql);
-			//lause.setInt(1, h.getId());
-			//lause.executeUpdate();
+		try {
+			
+			String sql = "SELECT date, weigth FROM webuser_weigth WHERE userid = ?";				
+			PreparedStatement lause = yhteys.prepareStatement(sql);
+			lause.setInt(1, h.getId());
+			lause.executeUpdate();
 
 
 			Statement haku = yhteys.createStatement();
