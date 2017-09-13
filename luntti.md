@@ -110,8 +110,19 @@ Kuva Painonhallinta-ohjelmaan?
 
 ### Framework
 
-DI = Dependency Injection 
+DI = Dependency Injection (esim. Demo 12 Auto -> jalat)
 IOC = Inversion of Control, kontrollin luovutus, framework ottaa kontrollin (Hollywood Principle)
+Github -> jusju -> swap
+
+### Demo 12
+
+Debug taso kattaa kaikki logitiedot, error pelkät virhetiedot
+OID Objektiluokan toString instanssi
+
+### Demo 13
+
+HenkiloDAO rajapinta on aika turha -> muutos luokaksi ja 
+
 
 
 
