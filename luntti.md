@@ -103,6 +103,18 @@ Paketoinniksi war
 webapp -> WEB-INF/web.xml vaaditaan (ehkä)
 Jokaiseen tyhjään hakemistoon .gitkeep tiestosto
 
+## 13.9.2017
+
+import static luokat
+Kuva Painonhallinta-ohjelmaan?
+
+### Framework
+
+DI = Dependency Injection 
+IOC = Inversion of Control, kontrollin luovutus, framework ottaa kontrollin (Hollywood Principle)
+
+
+
 
 
 
