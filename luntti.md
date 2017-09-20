@@ -127,6 +127,7 @@ HenkiloDAO rajapinta on aika turha -> muutos luokaksi ja
 
 Bootstrap tiedostot <mvc:resources mapping="/resources/**" location="/resources/" />
 Luetaan automaattisesti
+Controlleriin //formin tekeminen kopioidaan -> valueksi "kaikki"
 
 
 
