@@ -1,7 +1,7 @@
 package t5h15.controller;
 
 import javax.inject.Inject;
-
+import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -50,6 +50,13 @@ public class HenkiloController {
 		Henkilo henkilo = dao.etsi(id);
 		model.addAttribute("henkilo", henkilo);
 		return "henk/view";
+	}
+	//KAIKKIEN HENKILÖIDEN NÄYTTÄMINEN
+	@RequestMapping(value="lista", method=RequestMethod.GET)
+	public String listAll(Model model) {
+		List<Henkilo> henkilot = dao.haeKaikki();
+		model.addAttribute("henkilot", henkilot);
+		return "henk/viewAll";
 	}
 	
 }

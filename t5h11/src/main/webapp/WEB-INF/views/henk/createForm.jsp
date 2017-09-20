@@ -28,6 +28,7 @@
 				</p>
 				<p>	
 					<button type="submit">Lisää</button>
+					<br />
 				</p>
 			</fieldset>
 		</form:form>
