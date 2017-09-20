@@ -125,6 +125,9 @@ HenkiloDAO rajapinta on aika turha -> muutos luokaksi ja
 
 ## 20.9.2017
 
+Bootstrap tiedostot <mvc:resources mapping="/resources/**" location="/resources/" />
+Luetaan automaattisesti
+
 
 
 
