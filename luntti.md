@@ -129,6 +129,13 @@ Bootstrap tiedostot <mvc:resources mapping="/resources/**" location="/resources/
 Luetaan automaattisesti
 Controlleriin //formin tekeminen kopioidaan -> valueksi "kaikki"
 
+## 27.9.2017
+
+tail -f catalina.out
+
+
+
+
 
 
 
