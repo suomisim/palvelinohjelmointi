@@ -132,6 +132,13 @@ Controlleriin //formin tekeminen kopioidaan -> valueksi "kaikki"
 ## 27.9.2017
 
 tail -f catalina.out
+Beanissa attribuutittien validointisäännöt
+i18n = monikielisyys -> .properties tiedostoon käyttöliittymän kieli
+Henkilo.java/HenkiloImpl.java rajapinta on turha
+@Pattern(regexp = "[A-Z]") Loppuun niin voi omia sääntöjä luoda
+
+
+
 
 
 
