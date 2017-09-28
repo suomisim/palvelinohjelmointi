@@ -5,3 +5,11 @@ CREATE TABLE webuser_weigth (id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY, da
 CREATE TABLE levyt (id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY, nimi VARCHAR(255) NOT NULL, artisti VARCHAR(255) NOT NULL, vuosi SMALLINT NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 INSERT INTO levyt (nimi, artisti, vuosi) VALUES ('Kill Em All', 'Metallica', '1983'), ('Metallica', 'Metallica', '1991'), ('Master Of Puppets', 'Metallica', '1986'), ('...Baby One More Time', 'Britney Spears', '1999'), ('In The Zone', 'Britney Spears', '2003'), ('Circus', 'Britney Spears', '2008'), ('News of the World', 'Queen', '1977');
+
+
+CREATE TABLE painot (id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY, etunimi VARCHAR(55) NOT NULL, sukunimi VARCHAR(55) NOT NULL, paino NUMERIC (5,2) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE painot (id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY, pvm VARCHAR(10) NOT NULL, paino NUMERIC(5,2) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO painot (pvm, paino) VALUES ('24.9.2017', '80'), ('25.9.2017', '81'), ('26.9.2017', '82'), ('27.9.2017', '83');
+
