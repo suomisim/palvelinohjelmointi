@@ -1,8 +1,8 @@
 package painoOhjelma.v1.bean;
 
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotEmpty;
+import painoOhjelma.v1.bean.validation.*;
 
 
 
@@ -10,12 +10,12 @@ public class PainoImpl implements Paino {
 	
 	private int id;
 	
-	@NotEmpty
 	@Pattern(regexp = "[0-9]{2}.[0-9]{2}.[0-9]{4}")
+	@NotEmpty
 	private String pvm;
 	
-	@NotEmpty
-	@Size(min=2, max=6)
+
+	@PerusPaino
 	@Pattern(regexp = "^[0-9]{2,3}[.][0-9]{2}$")
 	private String paino;
 	

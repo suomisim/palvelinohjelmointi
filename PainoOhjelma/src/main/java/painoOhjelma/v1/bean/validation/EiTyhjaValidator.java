@@ -4,15 +4,16 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 public class EiTyhjaValidator implements
-		ConstraintValidator<EiTyhja, Double> {
+		ConstraintValidator<EiTyhja, String> {
 
 	public void initialize(EiTyhja EiTyhja) {
 
 	}
 
-	public boolean isValid(Double value, ConstraintValidatorContext context) {
+	public boolean isValid(String value, ConstraintValidatorContext context) {
 		
-		if (value == null) {
+		
+		if (value == null || value.length() == 0) {
 			return false;
 		}
 		return true;

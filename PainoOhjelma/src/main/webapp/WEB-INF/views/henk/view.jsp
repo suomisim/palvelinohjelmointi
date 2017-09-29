@@ -15,6 +15,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>	
 <body>
+	<div id="langsel">
+		<a href="?lang=en"><img src="https://images.apple.com/support/assets/images/layout/icons/flags/country/united_states.png" alt="" width="30" height="30"></a> | <a href="?lang=fi">
+		<img src="https://images.apple.com/support/assets/images/layout/icons/flags/country/finland.png" alt="" width="30" height="30"></a>
+	</div>
 
 	<h1>
 		<spring:message code="paino.create.heading" />
@@ -37,11 +41,11 @@
 					<form:input path="paino" cssErrorClass="VirheellinenKentta"/> <form:errors path="paino" cssClass="Virheteksti"/>	
 				</p>
 				<div class="alert alert-success">
-  					<strong>Success!</strong> Tietojen lisäys onnistui!
+  					<strong>Success!</strong><spring:message code="paino.create.success" />
 				</div>
 				<div class="btn-group">	
-					<button type="submit" class="btn btn-primary">Lisää</button>
-					<a href="lista" class="btn btn-info">Näytä painohistoriasi</a>
+					<button type="submit" class="btn btn-primary"><spring:message code="paino.create.add" /></button>
+					<a href="lista" class="btn btn-info"><spring:message code="paino.create.show" /></a>
 				</div>
 			</fieldset>
 		</form:form>

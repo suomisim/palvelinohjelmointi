@@ -28,10 +28,12 @@
 		<p>Lomakkeen avulla kirjataan käyttäjän tämänhetkinen paino tietokantaan. Sovellus hakee tietokannasta käyttäjän aikaisemmat kirjaukset</p>
 		<p></p>
 		<h3>Linkki</h3>
-		<p>
-			<a href="painot/uusi">Uusi Painokirjaus</a><br />
-			<a href="painot/lista">Näytä Painohistoria</a>
-		</p>
+
+
+			<a href="painot/uusi" class="btn btn-primary">Uusi Painokirjaus</a>
+			<a href="painot/lista" class="btn btn-primary">Näytä Painohistoria</a>
+
+
 	</div>
 </body>
 </html>

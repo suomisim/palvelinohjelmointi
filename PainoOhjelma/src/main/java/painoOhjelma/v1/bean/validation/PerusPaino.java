@@ -12,12 +12,12 @@ import javax.validation.Constraint;
 import javax.validation.Payload;
  
 @Documented
-@Constraint(validatedBy =  EiTyhjaValidator.class)
+@Constraint(validatedBy =  PerusPainoValidator.class)
 @Target( { FIELD, PARAMETER })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface EiTyhja {
+public @interface PerusPaino {
 	
- String message() default "{painoOhjelma.v1.EiTyhja.message}";
+ String message() default "{painoOhjelma.v1.PerusPaino.message}";
  
  Class<?>[] groups() default {};
  
