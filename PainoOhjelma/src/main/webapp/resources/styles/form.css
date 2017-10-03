@@ -69,3 +69,6 @@ button {
 	font-style: italic;
 	font-size: medium;
 }
+body {
+	padding-left: 20px;
+}

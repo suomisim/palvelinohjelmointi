@@ -54,7 +54,20 @@ public class PainoDAOSpringJdbcImpl implements PainoDAO {
 		p.setId(idHolder.getKey().intValue());
 
 	}
+	public List<Paino> haeTietty(String pvm) {
+		String sql = "SELECT pvm, paino FROM painot WHERE pvm = ?";
+		Object[] parametrit = new Object[] { pvm };
+		RowMapper<Paino> mapper = new PainoRowMapper();
 
+		List<Paino> painot;
+		try {
+			painot = jdbcTemplate.query(sql, parametrit, mapper);
+		} catch (IncorrectResultSizeDataAccessException e) {
+			throw new PainoPuuttuu(e);
+		}
+		return painot;
+
+	}
 
 	public List<Paino> haeKaikki() {
 

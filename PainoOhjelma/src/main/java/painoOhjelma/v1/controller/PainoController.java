@@ -46,29 +46,27 @@ public class PainoController {
 		model.addAttribute("paino", tyhjaPaino);
 		return "henk/createForm";
 	}
-	
 
 	@RequestMapping(value="uusi", method=RequestMethod.POST)
-	public String create( @ModelAttribute(value="paino") @Valid PainoImpl paino, BindingResult result) {
-		if (result.hasErrors()) {
-			return "henk/createForm";
+	public String create( @ModelAttribute(value="paino") @Valid PainoImpl paino, BindingResult result, String action, Model model, String pvm) {
+	
+		if (action.equals("show") && (result.hasErrors())) {
+			List<Paino> painot = dao.haeTietty(pvm);
+				model.addAttribute("painot", painot);
+				return "henk/viewAll";
+		} else if (result.hasErrors()) {
+				return "henk/createForm";
 		} else {
 			dao.talleta(paino);
 			return "henk/view";
 		}
+	
 	}
-	
-//	@RequestMapping(value="uusi", method=RequestMethod.POST)
-//	public String create( @ModelAttribute(value="paino") PainoImpl paino) {
-//		dao.talleta(paino);
-//		return "henk/view";
-//	}
-	
 	@RequestMapping(value="lista", method=RequestMethod.GET)
 	public String listAll(Model model) {
 		List<Paino> painot = dao.haeKaikki();
 		model.addAttribute("painot", painot);
 		return "henk/viewAll";
 	}
-	
+
 }

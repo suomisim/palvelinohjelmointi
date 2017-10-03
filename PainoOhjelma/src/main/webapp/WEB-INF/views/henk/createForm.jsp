@@ -1,4 +1,4 @@
-<%@page contentType="text/html;charset=UTF-8"%>
+<%@page contentType="text/html;meta charset=UTF-8"%>
 <%@page pageEncoding="UTF-8"%>
 <%@ page session="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Painokirjauksen lisääminen</title>
+<title><spring:message code="paino.create.heading" /></title>
 <link rel="stylesheet" type="text/css" href="../resources/styles/form.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>	
@@ -24,9 +24,8 @@
 		<spring:message code="paino.create.heading" />
 	</h1>
 		
-		<spring:hasBindErrors name="henkilo">
+		<spring:hasBindErrors name="paino">
 			<p class="Virheotsikko"><spring:message code="paino.create.errors" />:</p>
-			<div class="Virheblokki"><form:errors path="*"/></div>
 		</spring:hasBindErrors>
 		
 		<form:form modelAttribute="paino" method="post">
@@ -41,10 +40,12 @@
 					<form:input path="paino" cssErrorClass="VirheellinenKentta"/> <form:errors path="paino" cssClass="Virheteksti"/>	
 				</p>
 				<div class="btn-group">	
-					<button type="submit" class="btn btn-primary"><spring:message code="paino.create.add" /></button>
+					<button type="submit" name="action" value="add" class="btn btn-primary"><spring:message code="paino.create.add" /></button>
 					<a href="lista" class="btn btn-info"><spring:message code="paino.create.show" /></a>
+					<button type="submit" name="action" value="show" class="btn btn-primary"><spring:message code="paino.create.showPvm" /></button>
 				</div>
 			</fieldset>
 		</form:form>
+
 </body>
 </html>

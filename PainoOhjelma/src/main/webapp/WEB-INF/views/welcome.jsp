@@ -1,17 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Paino-Ohjelma</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body>
+<body style="padding-left:20px;">
 
 	<h1>Paino-Ohjelma</h1>
 
-	<div id="contentbox">
+	<div class="container">
 		<h3>Sisältö</h3>
 		<ul>
 			<li>Spring Web MVC</li>
@@ -24,6 +24,8 @@
 			<li>Custom annotation</li>
 			<li>Custom validator</li>
 		</ul>
+	</div>
+	<div class="container">
 		<h3>Toiminta</h3>
 		<p>Lomakkeen avulla kirjataan käyttäjän tämänhetkinen paino tietokantaan. Sovellus hakee tietokannasta käyttäjän aikaisemmat kirjaukset</p>
 		<p></p>
@@ -32,8 +34,6 @@
 
 			<a href="painot/uusi" class="btn btn-primary">Uusi Painokirjaus</a>
 			<a href="painot/lista" class="btn btn-primary">Näytä Painohistoria</a>
-
-
 	</div>
 </body>
 </html>
