@@ -140,6 +140,7 @@ Henkilo.java/HenkiloImpl.java rajapinta on turha
 ## 4.10.2017
 
 db.url=jdbc:mariadb://localhost/javaee?autoReconnect=true
+a href="../../" viitataan polussa taaksepäin
 
 
 
