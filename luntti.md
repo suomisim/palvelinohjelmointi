@@ -137,6 +137,12 @@ i18n = monikielisyys -> .properties tiedostoon käyttöliittymän kieli
 Henkilo.java/HenkiloImpl.java rajapinta on turha
 @Pattern(regexp = "[A-Z]") Loppuun niin voi omia sääntöjä luoda
 
+## 4.10.2017
+
+db.url=jdbc:mariadb://localhost/javaee?autoReconnect=true
+
+
+
 
 
 
